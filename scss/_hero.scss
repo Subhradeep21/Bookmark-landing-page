@@ -1,0 +1,77 @@
+.hero{
+
+    .container{
+
+        @include breakpoint-up(large){
+            
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+    }
+
+        
+
+    &__img{
+        position: relative;
+        margin-bottom: 3rem;
+        @include breakpoint-up(large){
+            flex: 1;
+        }
+        
+        img{
+            height: 100%;
+            width: 113%;
+            transform: translateX(-1.5rem);
+            z-index: 2;
+            
+            
+        }
+            &::after{
+                content: "";
+                position: absolute;
+                height: 80%;
+                width: 95%;
+                right: -2rem;
+                border-bottom-left-radius: 39%;
+                bottom: -4px;
+                background: #5368df;
+                z-index: -1;
+            }
+        }
+
+        &__title{
+            @include breakpoint-up(large){
+                flex: 1;
+                text-align: left;
+                padding-right: 14rem;
+
+                h1{
+                    font-size: 2.5rem;
+                }
+            }
+
+            text-align: center;
+            h1{
+                margin-bottom: 1.5rem;
+            }
+            p{
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        &__btns{
+            @include breakpoint-up(large){
+                text-align: left;
+            }
+            text-align: center;
+
+            button:not(:last-child){
+                margin-right: 10px;
+            }
+        }
+
+    
+
+}

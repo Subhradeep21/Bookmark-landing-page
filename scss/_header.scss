@@ -1,10 +1,16 @@
 .header{
 
+    &__logo{
+        z-index: 10;
+        // background-image: url("../images/logo-bookmark.svg");
+        // background-repeat: no-repeat;   
+    }
 
     &__wrapper{
+
+        
         &.toggle{
             
-         
             span:first-child{
                 background-color: white;
                 transform: rotate(45deg) translate(1px, 3px);
@@ -24,7 +30,7 @@
                 right: 0;
                 bottom: 0;
                 left: 0;
-                
+                z-index: 9;
                 background-color: $veryDarkBlue;
                 opacity: .94;
             }
@@ -33,6 +39,7 @@
    
 
     &__hamburger{
+        z-index: 10;
         
        span{
             display: block;
@@ -102,6 +109,7 @@
     padding: 2rem;
     display: none;
     scroll-behavior: none;
+    z-index: 10;
    
    
     ul{
@@ -141,7 +149,6 @@
     position: absolute;
     bottom: 2rem;
     left: 50%;
-    
     transform: translateX(-50%);
         a{
             &:not(:last-child){

@@ -46,3 +46,52 @@ body{
     }
 }
 
+
+h1,h2,h3{
+    color: $veryDarkBlue;
+    line-height: 1.4;
+}
+p{
+    color: $grayishBlue;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.btn{
+    cursor: pointer;
+    padding: 13px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #565b71;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    box-shadow: #c4c4c4cc -1px 6px 23px -5px;
+    background-color: #ecececcc;
+    transition: all 200ms ease-in-out;
+
+
+    &:hover{
+        
+        background-color: white;
+        border: 1px solid #565b71;
+    }
+}
+
+.btn-blue{
+    cursor: pointer;
+    padding: 13px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    box-shadow: #c4c4c4cc 0px 6px 23px -5px;
+    background-color: $softBlue;
+    transition: all 200ms ease-in-out;
+
+    &:hover{
+        color: $softBlue;
+        border: 1px solid $softBlue;
+        background-color: white;
+    }
+}
