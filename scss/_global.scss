@@ -6,5 +6,43 @@
 
 body{
     font-family: 'Rubik', sans-serif;
-    
+    font-size: $fontDefault;
+
+    li{
+        list-style: none
+    }
+    a{
+        text-decoration: none;
+    }
 }
+
+.flex-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hide-for-mobile{
+    //hide for tablet and mobile 
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+.hide-for-desktop{
+    //hide for desktop
+    @include breakpoint-up(large){
+        display:none;
+    }
+}
+
+.container{
+    padding: 3rem 8.4rem;
+
+    @include breakpoint-down(large){
+        padding : 3rem 6rem;
+    }
+
+    @include breakpoint-down(medium){
+        padding: 3rem 2rem;
+    }
+}
+
