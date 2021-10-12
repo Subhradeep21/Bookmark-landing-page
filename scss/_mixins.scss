@@ -17,4 +17,11 @@ $breakpoints-down:("small":"639px", "medium":"1023px", "large":"1439px");
         @content;
     } 
 }
+@mixin breakpoint-tab {
+    @media (min-width: 640px) and (max-width: 1023px) {
+        @content;
+        
+    }
+    
+}
 
