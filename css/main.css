@@ -70,6 +70,17 @@ h1, h2, h3 {
   line-height: 1.4;
 }
 
+@media (max-width: 639px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
 p {
   color: #9194a1;
   line-height: 1.5;
@@ -435,5 +446,102 @@ button {
   .hero__btns button:not(:last-child) {
     margin-right: 14px;
   }
+}
+
+.features {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.features__title {
+  margin-bottom: 2rem;
+}
+
+.features__menu {
+  margin-bottom: 5rem;
+}
+
+.features__menu p {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: block;
+  padding: 1rem 0;
+  border-top: 1px solid #ccc;
+  cursor: pointer;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.features__menu p:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.features__menu p.active {
+  color: #252b46;
+  font-size: 1.35rem;
+}
+
+.features__menu p.active::before {
+  content: "";
+  position: absolute;
+  right: 23%;
+  left: 23%;
+  bottom: 0px;
+  opacity: 1;
+  height: 5px;
+  background-color: #fa5757;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.features__menu p::before {
+  content: "";
+  position: absolute;
+  right: 76%;
+  left: 23%;
+  bottom: 0px;
+  opacity: 0;
+  height: 5px;
+  background-color: #fa5757;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.features__menu p:hover {
+  color: #fa5757;
+}
+
+.features__menu-items {
+  display: none;
+}
+
+.features__menu-items.visible {
+  display: block;
+}
+
+.features__menu-items-img {
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.features__menu-items-img img {
+  height: auto;
+  width: 79vw;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.features__menu-items-img::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 95%;
+  left: -2rem;
+  bottom: -33px;
+  border-top-right-radius: 56%;
+  border-bottom-right-radius: 39%;
+  background: #5368df;
+  z-index: -1;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,100 @@
+.features{
+    margin: 4rem 0;
+    text-align: center;
+
+    &__title{
+        margin-bottom: 2rem;
+    }
+
+    &__menu{
+        margin-bottom: 5rem;
+        p{
+            position: relative;
+            font-size: 1.2rem;
+            font-weight: 500;
+            display: block;
+            padding: 1rem 0;
+            border-top: 1px solid #ccc;
+            cursor: pointer;
+            transition: all 150ms ease-in-out;
+            &:last-child{
+                border-bottom: 1px solid #ccc;
+            }
+            &.active{
+                color: $veryDarkBlue ;
+                font-size: 1.35rem;
+
+                &::before{
+                content: "";
+                position: absolute;
+                right: 23%;
+                left: 23%;
+                bottom: 0px;
+                opacity: 1;
+                height: 5px;
+                background-color: $softRed;
+                transition: all 200ms ease-in-out;
+                }
+            }
+        
+             &::before{
+                content: "";
+                position: absolute;
+                right: 76%;
+                left: 23%;
+                bottom: 0px;
+                opacity: 0;
+                height: 5px;
+                background-color: $softRed;
+                transition: all 200ms ease-in-out;
+            }
+             
+           &:hover{
+                color: $softRed ;
+            }
+        }
+    }
+            
+              
+
+
+    &__menu-items{
+        &.visible{
+            display: block;
+         }
+        display: none;
+        
+        
+        &-img{
+            
+            margin-bottom: 5rem;
+            position: relative;
+            img{
+                height: auto;
+                width: 79vw;
+                transition: all 200ms ease-in-out;
+            }
+                
+                &::after{
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    width: 95%;
+                    left: -2rem;
+                    bottom: -33px;
+                    border-top-right-radius: 56%;
+                    border-bottom-right-radius: 39%;
+                    background: #5368df;
+                    z-index: -1;
+                }
+            }
+  
+           
+
+    }
+
+}
+ 
+
+
+

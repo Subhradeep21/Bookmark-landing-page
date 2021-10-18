@@ -56,6 +56,15 @@ h1,h2,h3{
     color: $veryDarkBlue;
     line-height: 1.4;
 }
+h1{
+    @include breakpoint-down(small){
+        font-size: 2rem;
+    }
+}
+h2{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
 p{
     color: $grayishBlue;
     line-height: 1.5;
