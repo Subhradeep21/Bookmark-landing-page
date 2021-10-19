@@ -4,6 +4,10 @@
 
     &__title{
         margin-bottom: 2rem;
+        @include breakpoint-up(large){
+            max-width: 48%;
+            margin: 0 auto 4rem auto;
+        }
     }
 
     &__menu{
@@ -23,6 +27,9 @@
             &.active{
                 color: $veryDarkBlue ;
                 font-size: 1.35rem;
+                @include breakpoint-up(large){
+                    font-size: 1.2rem;
+                }
 
                 &::before{
                 content: "";
@@ -34,6 +41,10 @@
                 height: 5px;
                 background-color: $softRed;
                 transition: all 200ms ease-in-out;
+                @include breakpoint-up(large){
+                    right: -44px;
+                    left: -44px;
+                }
                 }
             }
         
@@ -53,6 +64,28 @@
                 color: $softRed ;
             }
         }
+
+        @include breakpoint-up(large){
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-bottom: 1px solid #ccc;
+            max-width: 65%;
+            margin-right: auto;
+            margin-left: auto;
+
+            p{
+               font-size: 1.2rem;
+               font-weight: 400;
+                border: none;
+               
+
+                &:last-child{
+                    border: none;
+                }
+            }
+        }
+       
     }
             
               
@@ -61,6 +94,11 @@
     &__menu-items{
         &.visible{
             display: block;
+            @include breakpoint-up(large){
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
          }
         display: none;
         
@@ -73,6 +111,15 @@
                 height: auto;
                 width: 79vw;
                 transition: all 200ms ease-in-out;
+                @include breakpoint-up(large){
+                    flex: 1;
+                    width: 39vw;
+                    margin-left: 1.5rem;
+                }
+                @include breakpoint-tab{
+                    width: 70vw;
+                }
+
             }
                 
                 &::after{
@@ -86,9 +133,41 @@
                     border-bottom-right-radius: 39%;
                     background: #5368df;
                     z-index: -1;
+                    @include breakpoint-up(large){
+                        height: 97%;
+                        width: 116%;
+                        left: -10rem;
+                        bottom: -87px;
+                    }
+                    @include breakpoint-tab{
+                        height: 80%;
+                        width: 91%;
+                        left: -5rem;
+                        bottom: -60px;
+                    }
                 }
             }
   
+         &-title{
+             @include breakpoint-up(large){
+                 margin-left: 8rem;
+                 text-align: left;
+                 flex: 1;
+             }
+             h2{
+                 @include breakpoint-tab{
+                     margin-top: 7rem;
+                 }
+             }
+             p{
+                 margin-bottom: 2rem;
+             }
+             button{
+                 @include breakpoint-down(small){
+                     display: none;
+                 }
+             }
+         }
            
 
     }
