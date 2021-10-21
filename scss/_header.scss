@@ -33,6 +33,15 @@
                 z-index: 9;
                 background-color: $veryDarkBlue;
                 opacity: .94;
+                
+            }
+
+            .header__logo{
+                svg{
+                    path{
+                        fill:white;
+                    }
+                }
             }
         }
     }
@@ -132,6 +141,7 @@
                 font-weight: lighter;
                 font-size: 18px;
                 letter-spacing: 2px;
+                transition: all 300ms ease-in-out;
                 &:hover{
                     color: $softRed;
                 }
@@ -150,10 +160,21 @@
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
-        a{
+        svg{
+            path{
+
+                transition: all 300ms ease-in-out;
+            }
             &:not(:last-child){
 
                 margin-right: 2rem ;
+            }
+
+            &:hover{
+                cursor: pointer;
+                path{
+                    fill: $softRed;
+                }
             }
         }
     }
