@@ -1,0 +1,81 @@
+.footer{
+    background-color: $veryDarkBlue;
+    text-align: center;
+    .container{
+        @include breakpoint-up(large){
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__logo{
+        margin-bottom: 2rem;
+        @include breakpoint-up(large){
+            margin: 0;
+            margin-right: 4rem;
+            flex: 1;
+        }
+        svg{
+            path{
+                fill: white;
+            }
+        }
+    }
+
+    &__links{
+       
+        margin-bottom: 2.5rem;
+        @include breakpoint-up(large){
+            display: flex;
+            margin-bottom: 0;
+            
+        }
+        a{
+            @include breakpoint-up(large){
+                margin-bottom: 0;
+                margin-right: 3rem;
+            }
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ccc;
+            line-height: 1.5;
+            font-size: 15px;
+            transition: all 300ms ease;
+            &:not(:last-child){
+                margin-bottom: 1.4rem;
+                
+                 @include breakpoint-up(large){
+                    margin-bottom: 0;
+                 }
+            }
+
+            &:hover{
+                color: $softRed;
+            }
+        }
+
+
+
+    }
+
+    &__social-icons{
+     
+        svg:first-child{
+            margin-right: 3rem;
+        }
+        svg{
+            path{
+
+                transition: all 300ms ease;
+            }
+            &:hover{
+                cursor: pointer;
+                path{
+                    fill:$softRed;
+                }
+            }
+        }
+    }
+}
