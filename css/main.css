@@ -821,4 +821,121 @@ button {
   padding-right: 1.3rem;
   padding-left: 1.3rem;
 }
+
+.contact {
+  text-align: center;
+  background-color: #5368df;
+}
+
+@media (min-width: 1024px) {
+  .contact .container {
+    max-width: 54%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.contact__title p {
+  color: white;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 5px;
+  margin: 1rem 0 0.6rem;
+}
+
+.contact__title h2 {
+  color: white;
+  font-weight: 400;
+}
+
+.contact__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .contact__input {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .contact__input {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.contact__input input {
+  width: 100%;
+  padding: 1rem;
+  font-family: 'Rubik', sans-serif;
+  font-size: 15px;
+  outline: none;
+  margin: .5rem 0;
+  border: 1px solid transparent;
+  border-radius: 7px;
+}
+
+@media (min-width: 1024px) {
+  .contact__input input {
+    -webkit-box-flex: 2.5;
+        -ms-flex: 2.5;
+            flex: 2.5;
+    margin-right: 1rem;
+  }
+}
+
+.contact__input input::-webkit-input-placeholder {
+  color: #cccc;
+}
+
+.contact__input input:-ms-input-placeholder {
+  color: #cccc;
+}
+
+.contact__input input::-ms-input-placeholder {
+  color: #cccc;
+}
+
+.contact__input input::placeholder {
+  color: #cccc;
+}
+
+.contact__input input:last-child {
+  background-color: #fa5757;
+  color: white;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.contact__input input:last-child:hover {
+  cursor: pointer;
+  color: #fa5757;
+  border: 1px solid #fa5757;
+  background-color: white;
+}
+
+@media (min-width: 1024px) {
+  .contact__input input:last-child {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
 /*# sourceMappingURL=main.css.map */
