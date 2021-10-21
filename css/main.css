@@ -90,7 +90,7 @@ h2 {
 p {
   color: #9194a1;
   line-height: 1.5;
-  font-size: 1rem;
+  font-size: 15px;
 }
 
 @media (min-width: 1024px) {
@@ -749,5 +749,76 @@ button {
             justify-content: center;
     margin-bottom: 5rem;
   }
+}
+
+@media (min-width: 1024px) {
+  .faqs {
+    max-width: 58%;
+    margin: 0 auto;
+  }
+}
+
+.faqs__title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.faqs__question {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #cccc;
+}
+
+.faqs__question .question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.faqs__question .question p {
+  color: #252b46;
+}
+
+.faqs__question .question svg {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.faqs__question .answer {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.faqs__question.show .answer {
+  max-height: 350px;
+  padding: 1rem 0 2rem;
+}
+
+.faqs__question.show .question svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.faqs__question.show .question svg path {
+  stroke: #fa5757;
+}
+
+.faqs__info-button {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.faqs__info-button button {
+  padding-right: 1.3rem;
+  padding-left: 1.3rem;
 }
 /*# sourceMappingURL=main.css.map */

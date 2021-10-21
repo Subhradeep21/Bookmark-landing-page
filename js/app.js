@@ -1,8 +1,11 @@
 const hamBurger = document.querySelector(".header__hamburger");
 const headerNav = document.querySelector(".header__wrapper")
 const toggleMenu = document.querySelector(".toggle-menu");
-let tabs = document.querySelectorAll("[data-tab-target]");
-let tabItems = document.querySelectorAll("[data-tab-content");
+
+const tabs = document.querySelectorAll("[data-tab-target]");
+const tabItems = document.querySelectorAll("[data-tab-content");
+
+const faqs = document.querySelectorAll(".faqs__question");
 
 hamBurger.addEventListener('click', () => {
     if (!headerNav.classList.contains("toggle")) {
@@ -35,6 +38,13 @@ tabs.forEach(tab => {
     })
 
 });
+
+faqs.forEach(faq => {
+    faq.addEventListener("click", () => {
+        faq.classList.toggle("show");
+    })
+})
+
 
 /*
 element.addEventListener("click", function () {

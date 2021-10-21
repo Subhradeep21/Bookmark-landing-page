@@ -71,7 +71,7 @@ h2{
 p{
     color: $grayishBlue;
     line-height: 1.5;
-    font-size: 1rem;
+    font-size: 15px;
     @include breakpoint-up(large){
         font-size: 18px;
     }
